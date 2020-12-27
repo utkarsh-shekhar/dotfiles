@@ -1,5 +1,3 @@
-~/.fehbg &
-dunst &
 picom --config ~/.config/picom/picom.conf &
 dwmblocks &
 

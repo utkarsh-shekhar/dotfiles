@@ -1,6 +1,6 @@
 ~/.fehbg &
 dunst &
-picom &
+picom --config ~/.config/picom/picom.conf &
 dwmblocks &
 
 # -R restores the last colorscheme that was in use.

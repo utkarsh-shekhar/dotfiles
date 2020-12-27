@@ -11,3 +11,6 @@ alias vim='nvim'
 alias vi='nvim'
 PS1='[\u@\h \W]\$ '
 alias config='/usr/bin/git --git-dir=/home/utkarsh/.cfg/ --work-tree=/home/utkarsh'
+
+export HISTTIMEFORMAT="%d/%m/%y %T "
+

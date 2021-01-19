@@ -10,6 +10,15 @@ cd ~/Documents/tapclicks
 tmux has-session -t $session_one>/dev/null
 
 if [ $? != 0 ]; then
+  localip=$(ip addr | grep 192. | tr '/' ' ' | awk '{ print $2 }')
+  host="http://$localip:8080/"
+  substitute="SERP_SERVICE_BASE_API=$host"
+
+  cat .env | tr '\n' ' ' | awk "{sub(/SERP_SERVICE_BASE_API=.\S+/, \"${substitute}\"); print $1}" | tr ' ' '\n' > temp
+  mv temp .env
+  rm temp
+  echo "Added SERP IP"
+
   ./docker/start.cmd
 
   # Set up your session

@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
+Plug 'sbdchd/neoformat'
 " Using plug
 Plug 'dylanaraps/wal.vim'
 Plug 'neovim/nvim-lspconfig'

@@ -73,7 +73,7 @@ if [[ $1 = '' ]] || [[ $1 = 'serp' ]]; then
     tmux rename-window 'docker'
 
     tmux new-window
-    tmux send-keys 'vim' Enter
+    tmux send-keys 'vim -S Session.vim' Enter
     tmux rename-window 'nvim'
 
     tmux select-window -t "$session_two:1"
